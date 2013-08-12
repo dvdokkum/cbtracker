@@ -3,20 +3,31 @@
 	<head>
 		<title>CBP Tracker</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	</head>
 	<body>
+		<div id="site-widgets">
 		<div class="frame-container">
 	    <iframe src="https://chartbeat.com/publishing/dashboard/?url=" scrolling="no" class="frame"></iframe>
 		</div>
-		<div class="frame-container">
-	    <iframe src="https://chartbeat.com/publishing/dashboard/?url=" scrolling="no" class="frame"></iframe>
-		</div>
-		<div class="frame-container">
-	    <iframe src="https://chartbeat.com/publishing/dashboard/?url=" scrolling="no" class="frame"></iframe>
-		</div>
-		<div class="frame-container">
-	    <iframe src="https://chartbeat.com/publishing/dashboard/?url=" scrolling="no" class="frame"></iframe>
-		</div>
+</div>
 	</div>
+<div id="addbutton" class="frame-container">click here to add a site</div>
+
+<script type="text/javascript">
+$('#addbutton').click(function () {
+	$( "<div/>", {
+  "id": "domain",
+  "class": "frame-container",
+}).appendTo('#site-widgets');
+
+	$('<iframe>', {
+   src: 'https://chartbeat.com/publishing/dashboard/?url=',
+   class: 'frame',
+   scrolling: 'no',
+   }).appendTo('#domain');
+});
+</script>
+
 	</body>
 </html>
