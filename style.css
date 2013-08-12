@@ -1,0 +1,23 @@
+#list-wrapper li {
+	display:inline;
+	list-style-type: none;
+}
+
+.frame-container
+{
+    width    : 193px;
+    height   : 300px;
+    overflow : hidden;
+    position : relative;
+    border: 2px groove;
+    display: inline-block;
+}
+ 
+.frame
+{
+    position : absolute;
+    top      : -205px;
+    left     : -65px;
+    width    : 400px;
+    height   : 600px;
+}
